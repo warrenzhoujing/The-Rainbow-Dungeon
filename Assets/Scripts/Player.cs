@@ -34,6 +34,7 @@ public class Player : MonoBehaviour {
 	float gravity = -20;
 	float maxJumpForce = 10;
 	float minJumpForce = 10;
+	float jumpDelay;
 
 	bool facingRight = true;
 
@@ -46,6 +47,9 @@ public class Player : MonoBehaviour {
 	Vector3 velocity;
 	Controller2D controller;
 
+	[HideInInspector]
+	public Vector3 startPosition;
+
 	void Start() {
 		controller = GetComponent<Controller2D> ();
 
@@ -54,19 +58,26 @@ public class Player : MonoBehaviour {
 		minJumpForce = Mathf.Sqrt(2 * Mathf.Abs(gravity) * minJumpHeight);
 		spriteRenderer = GetComponent<SpriteRenderer>();
 
+		startPosition = transform.position;
+		jumpDelay = 0;
 	}
 
 	void Update () {
 
 		bool onWall = false;
+		
 
 		Vector2 input = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
+
+		public_input = input;
 
 		if (flipSpriteHorizontally) {
 			AutoFlip(input);
 		}
 
-		public_input = input;
+		if (controller.collisions.below) {
+			jumpDelay = 0.4f;
+		}
 
 		if ((controller.collisions.left || controller.collisions.right) && wallPhysics) {
 			if (controller.collisions.left) {
@@ -118,7 +129,7 @@ public class Player : MonoBehaviour {
 		}
 
 		
-		if (Input.GetKeyDown(KeyCode.UpArrow)) {
+		if (Input.GetKey(KeyCode.UpArrow)) {
 			delay = 1f;
 			if (onWall && wallPhysics) {
 				if (wallDirX == input.x) {
@@ -130,7 +141,7 @@ public class Player : MonoBehaviour {
 				}
 			}
 			
-			if (controller.collisions.below) {
+			if (controller.collisions.below || jumpDelay > 0) {
 				velocity.y = maxJumpForce;
 			}
 		} else {
@@ -155,11 +166,15 @@ public class Player : MonoBehaviour {
 			velocity.y = wallJumpLeap.y;
 		}
 
+		if (controller.collisions.touchingBad) {
+			transform.position = startPosition;
+		}
+
 		
 		
 		velocity.y += gravity * Time.deltaTime;
 		controller.Move(velocity * Time.deltaTime);
-
+		jumpDelay -= 0.1f;
 
 	}
 

@@ -10,6 +10,7 @@ public class Controller2D : RaycastController {
 		base.Start();
 		collisions.faceDir = 1;
 	}
+	
 	public void Move(Vector3 velocity, bool standingOnPlatform = false) {
 		UpdateRaycastOrigins();
 		collisions.Reset();
@@ -47,6 +48,7 @@ public class Controller2D : RaycastController {
 			Vector2 rayOrigin = (directionX == -1)?raycastOrigins.bottomLeft:raycastOrigins.bottomRight;
 			rayOrigin += Vector2.up * (horizontalRaySpacing * i);
 			RaycastHit2D hit = Physics2D.Raycast(rayOrigin, Vector2.right * directionX, rayLength, ground);
+			RaycastHit2D hitBad = Physics2D.Raycast(rayOrigin, Vector2.up * directionX, rayLength, bad);
 			Debug.DrawRay(rayOrigin, Vector2.right * directionX * rayLength,Color.red);
 
 			if (hit) {
@@ -89,6 +91,10 @@ public class Controller2D : RaycastController {
 					collisions.right = directionX == 1;
 				}
 			}
+
+			if (hitBad) {
+				collisions.touchingBad = true;
+			}
 		}
 	}
 	void VerticalCollisions(ref Vector3 velocity) {
@@ -98,6 +104,7 @@ public class Controller2D : RaycastController {
 			Vector2 rayOrigin = (directionY == -1)?raycastOrigins.bottomLeft:raycastOrigins.topLeft;
 			rayOrigin += Vector2.right * (verticalRaySpacing * i + velocity.x);
 			RaycastHit2D hit = Physics2D.Raycast(rayOrigin, Vector2.up * directionY, rayLength, ground);
+			RaycastHit2D hitBad = Physics2D.Raycast(rayOrigin, Vector2.up * directionY, rayLength, bad);
 			Debug.DrawRay(rayOrigin, Vector2.up * directionY * rayLength,Color.red);
 
 			if (hit) {
@@ -113,6 +120,10 @@ public class Controller2D : RaycastController {
 
 				collisions.below = directionY == -1;
 				collisions.above = directionY == 1;
+			}
+
+			if (hitBad) {
+				collisions.touchingBad = true;
 			}
 		}
 
@@ -177,6 +188,7 @@ public class Controller2D : RaycastController {
 		public Vector3 velocityOld;
 		public int faceDir;
 		public bool touchingSlippery;
+		public bool touchingBad;
 
 		public void Reset() {
 			above = below = false;
@@ -185,6 +197,7 @@ public class Controller2D : RaycastController {
 			descendingSlope = false;
 			slopeAngleOld = slopeAngle = 0f;
 			touchingSlippery = false;
+			touchingBad = false;
 		}
 	}
 

@@ -18,6 +18,7 @@ public class RaycastController : MonoBehaviour {
 	public int horizontalRayCount = 4;
 	public int verticalRayCount = 4;
 	public LayerMask ground;
+	public LayerMask bad;
 
 	public virtual void Awake() {
 		collider = GetComponent<BoxCollider2D>();

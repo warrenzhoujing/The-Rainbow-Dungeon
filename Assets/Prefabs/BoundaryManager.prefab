@@ -36,6 +36,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4145382542110926}
   - component: {fileID: 61460323354791054}
+  - component: {fileID: 114289864205740138}
   m_Layer: 0
   m_Name: BoundaryManager
   m_TagString: Untagged
@@ -120,3 +121,15 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 10, y: 10}
   m_EdgeRadius: 0
+--- !u!114 &114289864205740138
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1967061121991856}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74c76dc4b46f441fa9c7df53508499db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Boundary: {fileID: 1335615983188528}
