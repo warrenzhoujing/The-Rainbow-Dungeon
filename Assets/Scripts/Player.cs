@@ -25,8 +25,9 @@ public class Player : MonoBehaviour {
 	public float accelerationTimeAirborne = 0.2f;
 	public float accelerationTimeGrounded = 0.15f;
 	
-
+	[Header("Sprites")]
 	public Sprite wallRest;
+	public Sprite Man;
 
 	float timeToWallUnstick;
 	float delay = 1f;
@@ -50,16 +51,21 @@ public class Player : MonoBehaviour {
 	[HideInInspector]
 	public Vector3 startPosition;
 
+	public GameObject coin;
+
 	void Start() {
-		controller = GetComponent<Controller2D> ();
+		
+		controller = GetComponent<Controller2D>();
 
 		gravity = -(2 * maxJumpHeight) / Mathf.Pow(TimeToJumpApex, 2);
 		maxJumpForce = Mathf.Abs(gravity * TimeToJumpApex);
 		minJumpForce = Mathf.Sqrt(2 * Mathf.Abs(gravity) * minJumpHeight);
 		spriteRenderer = GetComponent<SpriteRenderer>();
+		spriteRenderer.sprite = Man;
 
 		startPosition = transform.position;
 		jumpDelay = 0;
+		coin = GameObject.Find("Coin");
 	}
 
 	void Update () {
@@ -168,6 +174,8 @@ public class Player : MonoBehaviour {
 
 		if (controller.collisions.touchingBad) {
 			transform.position = startPosition;
+			coin.SetActive(true);
+			spriteRenderer.sprite = Man;
 		}
 
 		

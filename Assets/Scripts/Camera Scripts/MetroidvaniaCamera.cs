@@ -6,11 +6,20 @@ public class MetroidvaniaCamera : MonoBehaviour {
 
 	BoxCollider2D cameraBox;
     Transform player;
-    public Player playerScript;
+    Player playerScript;
+    SpriteRenderer playerSpriteR;
+    public GameObject coin;
+    float spawnsMade;
+    public CoinManager coinManager;
+    public Sprite Man;
 
     void Start () {
         cameraBox = GetComponent<BoxCollider2D>();
         player = GameObject.Find("Player").GetComponent<Transform>();
+        playerScript = player.gameObject.GetComponent<Player>();
+        playerSpriteR = player.gameObject.GetComponent<SpriteRenderer>();
+
+        spawnsMade = 0;
     }
  
 	void Update () {
@@ -25,11 +34,17 @@ public class MetroidvaniaCamera : MonoBehaviour {
             
             if (newCamPosition != transform.position) {
                 playerScript.startPosition = playerScript.gameObject.transform.position;
+                spawnsMade ++;
+
+                if (spawnsMade > 2) {
+                    Destroy(coin);
+                    coinManager.coins ++;
+                    playerSpriteR.sprite = Man;
+                }
+                
             }
 
-            transform.position = new Vector3(Mathf.Clamp(player.position.x, GameObject.Find("Boundary").GetComponent<BoxCollider2D>().bounds.min.x + cameraBox.size.x / 2, GameObject.Find("Boundary").GetComponent<BoxCollider2D>().bounds.max.x - cameraBox.size.x / 2),
-        	Mathf.Clamp(player.position.y, GameObject.Find("Boundary").GetComponent<BoxCollider2D>().bounds.min.y + cameraBox.size.y / 2, GameObject.Find("Boundary").GetComponent<BoxCollider2D>().bounds.max.y - cameraBox.size.y / 2),
-            transform.position.z);
+            transform.position = newCamPosition;
          
         }
     }
