@@ -7,11 +7,12 @@ public class Coin : MonoBehaviour {
 	public SpriteRenderer playerSR;
 	public Player playerScript;
 	public Sprite ManWithCoin;
-	public Sprite Man;
+	public MetroidvaniaCamera mc;
 
 	void Start () {
 		playerScript = GameObject.Find("Player").GetComponent<Player>();
 		playerSR = GameObject.Find("Player").GetComponent<SpriteRenderer>();
+		mc = GameObject.Find("Main Camera").GetComponent<MetroidvaniaCamera>();
 	}
 
 	void OnCollisionEnter2D (Collision2D col) {
@@ -19,6 +20,7 @@ public class Coin : MonoBehaviour {
 			playerSR.sprite = ManWithCoin;
 			gameObject.SetActive(false);
 			playerScript.coin = gameObject;
+			mc.coin = gameObject;
 		}
 	}
 

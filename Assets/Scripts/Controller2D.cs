@@ -48,8 +48,13 @@ public class Controller2D : RaycastController {
 			Vector2 rayOrigin = (directionX == -1)?raycastOrigins.bottomLeft:raycastOrigins.bottomRight;
 			rayOrigin += Vector2.up * (horizontalRaySpacing * i);
 			RaycastHit2D hit = Physics2D.Raycast(rayOrigin, Vector2.right * directionX, rayLength, ground);
-			RaycastHit2D hitBad = Physics2D.Raycast(rayOrigin, Vector2.up * directionX, rayLength, bad);
+			RaycastHit2D hitBad = Physics2D.Raycast(rayOrigin, Vector2.right * directionX, rayLength, bad);
+			RaycastHit2D hitBad2 = Physics2D.Raycast(((directionX == -1)?raycastOrigins.bottomRight:raycastOrigins.bottomLeft) + 
+			Vector2.up * (horizontalRaySpacing * i), 
+			-Vector2.right * directionX, rayLength, bad);
+
 			Debug.DrawRay(rayOrigin, Vector2.right * directionX * rayLength,Color.red);
+
 
 			if (hit) {
 
@@ -92,7 +97,7 @@ public class Controller2D : RaycastController {
 				}
 			}
 
-			if (hitBad) {
+			if (hitBad || hitBad2) {
 				collisions.touchingBad = true;
 			}
 		}
@@ -105,7 +110,10 @@ public class Controller2D : RaycastController {
 			rayOrigin += Vector2.right * (verticalRaySpacing * i + velocity.x);
 			RaycastHit2D hit = Physics2D.Raycast(rayOrigin, Vector2.up * directionY, rayLength, ground);
 			RaycastHit2D hitBad = Physics2D.Raycast(rayOrigin, Vector2.up * directionY, rayLength, bad);
-			Debug.DrawRay(rayOrigin, Vector2.up * directionY * rayLength,Color.red);
+			RaycastHit2D hitBad2 = Physics2D.Raycast((directionY == -1)?raycastOrigins.topLeft:raycastOrigins.bottomLeft + Vector2.right * (verticalRaySpacing * i + velocity.x), 
+			-Vector2.up * directionY, rayLength, bad);
+
+			Debug.DrawRay(rayOrigin, Vector2.up * directionY * rayLength, Color.red);
 
 			if (hit) {
 
@@ -122,7 +130,7 @@ public class Controller2D : RaycastController {
 				collisions.above = directionY == 1;
 			}
 
-			if (hitBad) {
+			if (hitBad || hitBad2) {
 				collisions.touchingBad = true;
 			}
 		}

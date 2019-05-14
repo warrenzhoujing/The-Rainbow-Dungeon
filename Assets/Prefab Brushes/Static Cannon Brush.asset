@@ -9,9 +9,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2d5751a2c961df945a34295ccf5e576d, type: 3}
-  m_Name: Prefab brush
+  m_Name: Static Cannon Brush
   m_EditorClassIdentifier: 
   m_Prefabs:
-  - {fileID: 1806737063824152, guid: b2d64071efd4249c58d828393408cf17, type: 2}
+  - {fileID: 1476998141776754, guid: 12edb9a5a2de74995bf7b72aab557e4c, type: 2}
   m_PerlinScale: 0.5
   m_Z: 0

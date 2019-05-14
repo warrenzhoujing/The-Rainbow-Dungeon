@@ -40,6 +40,7 @@ public class Player : MonoBehaviour {
 	bool facingRight = true;
 
 	SpriteRenderer spriteRenderer;
+	MetroidvaniaCamera mc;
 
 
 	[HideInInspector]
@@ -66,6 +67,7 @@ public class Player : MonoBehaviour {
 		startPosition = transform.position;
 		jumpDelay = 0;
 		coin = GameObject.Find("Coin");
+		mc = GameObject.Find("Main Camera").GetComponent<MetroidvaniaCamera>();
 	}
 
 	void Update () {
@@ -174,8 +176,12 @@ public class Player : MonoBehaviour {
 
 		if (controller.collisions.touchingBad) {
 			transform.position = startPosition;
-			coin.SetActive(true);
+			if (coin) {
+				coin.SetActive(true);
+				
+			}
 			spriteRenderer.sprite = Man;
+			velocity = new Vector2(0, 0);
 		}
 
 		

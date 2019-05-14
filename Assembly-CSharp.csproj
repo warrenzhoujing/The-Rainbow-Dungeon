@@ -64,8 +64,10 @@
      <Compile Include="Assets\2d-extras-2018.2\Assets\Tilemap\Tiles\Rule Tile\Scripts\RuleTile.cs" />
      <Compile Include="Assets\2d-extras-2018.2\Assets\Tilemap\Tiles\Terrain Tile\Scripts\TerrainTile.cs" />
      <Compile Include="Assets\2d-extras-2018.2\Assets\Tilemap\Tiles\Weighted Random Tile\WeightedRandomTile.cs" />
+     <Compile Include="Assets\Scripts\Bullet.cs" />
      <Compile Include="Assets\Scripts\Camera Scripts\BoundaryManager.cs" />
      <Compile Include="Assets\Scripts\Camera Scripts\MetroidvaniaCamera.cs" />
+     <Compile Include="Assets\Scripts\Cannon.cs" />
      <Compile Include="Assets\Scripts\Coin.cs" />
      <Compile Include="Assets\Scripts\CoinManager.cs" />
      <Compile Include="Assets\Scripts\Controller2D.cs" />
