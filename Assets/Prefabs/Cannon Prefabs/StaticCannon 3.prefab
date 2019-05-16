@@ -21,9 +21,9 @@ GameObject:
   - component: {fileID: 4960402152766406}
   - component: {fileID: 212186768921842480}
   - component: {fileID: 114272077111378216}
-  - component: {fileID: 61787857184890798}
+  - component: {fileID: 61038523932141460}
   m_Layer: 9
-  m_Name: StaticCannon
+  m_Name: StaticCannon 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -35,14 +35,14 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1476998141776754}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &61787857184890798
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
+--- !u!61 &61038523932141460
 BoxCollider2D:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -79,6 +79,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   delay: 7
+  startDelay: 0
   bulletSpeed: 1
   Bullet: {fileID: 1192592568345722, guid: b6254bc1fc21849c88a48b9b9bdf888c, type: 2}
 --- !u!212 &212186768921842480

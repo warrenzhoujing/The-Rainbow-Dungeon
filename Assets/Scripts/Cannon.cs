@@ -10,13 +10,26 @@ public class Cannon : MonoBehaviour {
 	public float bulletSpeed;
 	public GameObject Bullet;
 	float delayCount;
+	float startDelayCount;
+	bool started;
 
 	void Start () {
 		delayCount = delay;
-		Shoot();
+		startDelayCount = startDelay;
+		started = false;
 	}
 
 	void Update () {
+		// start delay
+		if (startDelayCount < 0) {
+			if (!started) {
+				Shoot();
+				started = true;
+			}
+		} else {
+			delayCount = delay;
+			startDelayCount -= 0.1f;
+		}
 		
 		if (delayCount < 0) {
 			Shoot();

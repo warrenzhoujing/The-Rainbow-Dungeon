@@ -175,6 +175,7 @@ public class Player : MonoBehaviour {
 		}
 
 		if (controller.collisions.touchingBad) {
+			mc.coin = null;
 			transform.position = startPosition;
 			if (coin) {
 				coin.SetActive(true);
@@ -182,6 +183,7 @@ public class Player : MonoBehaviour {
 			}
 			spriteRenderer.sprite = Man;
 			velocity = new Vector2(0, 0);
+			
 		}
 
 		

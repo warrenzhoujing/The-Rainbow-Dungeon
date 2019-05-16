@@ -37,10 +37,13 @@ public class MetroidvaniaCamera : MonoBehaviour {
                 spawnsMade ++;
 
                 if (spawnsMade > 0) {
-                    playerScript.coin = null;
-                    Destroy(coin);
-                    coinManager.coins ++;
-                    playerSpriteR.sprite = Man;
+                    if (coin) {
+                        playerScript.coin = null;
+                        Destroy(coin);
+                        coinManager.coins ++;
+                        playerSpriteR.sprite = Man;
+                    }
+                    
                 }
                 
             }
