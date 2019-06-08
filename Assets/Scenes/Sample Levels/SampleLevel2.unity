@@ -152,6 +152,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 212163186558343030, guid: 7536704e5da694a37aba61e8f7a51ec1,
+        type: 2}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7536704e5da694a37aba61e8f7a51ec1, type: 2}
   m_IsPrefabAsset: 0
@@ -219,6 +224,11 @@ Prefab:
     - target: {fileID: 1967061121991856, guid: 7536704e5da694a37aba61e8f7a51ec1, type: 2}
       propertyPath: m_Name
       value: BoundaryManager (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 212163186558343030, guid: 7536704e5da694a37aba61e8f7a51ec1,
+        type: 2}
+      propertyPath: m_Color.a
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7536704e5da694a37aba61e8f7a51ec1, type: 2}
@@ -47443,11 +47453,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4867930557013124, guid: f556f7b5a7734424a8f0d048fc9bb1fd, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 1.98
       objectReference: {fileID: 0}
     - target: {fileID: 4867930557013124, guid: f556f7b5a7734424a8f0d048fc9bb1fd, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.72
       objectReference: {fileID: 0}
     - target: {fileID: 4867930557013124, guid: f556f7b5a7734424a8f0d048fc9bb1fd, type: 2}
       propertyPath: m_LocalPosition.z

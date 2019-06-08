@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MetroidvaniaCamera : MonoBehaviour {
 
@@ -14,6 +15,7 @@ public class MetroidvaniaCamera : MonoBehaviour {
     public Sprite Man;
 
     void Start () {
+
         cameraBox = GetComponent<BoxCollider2D>();
         player = GameObject.Find("Player").GetComponent<Transform>();
         playerScript = player.gameObject.GetComponent<Player>();

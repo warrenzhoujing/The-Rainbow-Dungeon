@@ -110,10 +110,11 @@ public class Controller2D : RaycastController {
 			rayOrigin += Vector2.right * (verticalRaySpacing * i + velocity.x);
 			RaycastHit2D hit = Physics2D.Raycast(rayOrigin, Vector2.up * directionY, rayLength, ground);
 			RaycastHit2D hitBad = Physics2D.Raycast(rayOrigin, Vector2.up * directionY, rayLength, bad);
-			RaycastHit2D hitBad2 = Physics2D.Raycast((directionY == -1)?raycastOrigins.topLeft:raycastOrigins.bottomLeft + Vector2.right * (verticalRaySpacing * i + velocity.x), 
+			RaycastHit2D hitBad2 = Physics2D.Raycast(((directionY == -1)?raycastOrigins.topLeft:raycastOrigins.bottomLeft) + (Vector2.right * (verticalRaySpacing * i + velocity.x)), 
 			-Vector2.up * directionY, rayLength, bad);
 
 			Debug.DrawRay(rayOrigin, Vector2.up * directionY * rayLength, Color.red);
+			
 
 			if (hit) {
 

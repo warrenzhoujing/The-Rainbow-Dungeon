@@ -6,6 +6,7 @@ public class Bullet : MonoBehaviour {
 
 	public float speed;
 	public LayerMask destroyAt;
+	public LayerMask alsoDestroyAt;
 
 	void Start () {
 		if (speed > 10000) {
@@ -18,7 +19,7 @@ public class Bullet : MonoBehaviour {
 	}
 
 	void OnCollisionEnter2D (Collision2D col) {
-		if (destroyAt == (destroyAt | (1 << col.gameObject.layer))){
+		if (destroyAt == (destroyAt | (1 << col.gameObject.layer)) || alsoDestroyAt == (alsoDestroyAt | (1 << col.gameObject.layer))){
 			Destroy(gameObject);
 		}
 	}
