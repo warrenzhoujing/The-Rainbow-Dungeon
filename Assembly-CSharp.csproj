@@ -64,6 +64,7 @@
      <Compile Include="Assets\2d-extras-2018.2\Assets\Tilemap\Tiles\Rule Tile\Scripts\RuleTile.cs" />
      <Compile Include="Assets\2d-extras-2018.2\Assets\Tilemap\Tiles\Terrain Tile\Scripts\TerrainTile.cs" />
      <Compile Include="Assets\2d-extras-2018.2\Assets\Tilemap\Tiles\Weighted Random Tile\WeightedRandomTile.cs" />
+     <Compile Include="Assets\Scripts\AudioManager.cs" />
      <Compile Include="Assets\Scripts\Bullet.cs" />
      <Compile Include="Assets\Scripts\Camera Scripts\BoundaryManager.cs" />
      <Compile Include="Assets\Scripts\Camera Scripts\InitCamResolution.cs" />
@@ -83,6 +84,7 @@
      <Compile Include="Assets\Scripts\SelectableLevel.cs" />
      <Compile Include="Assets\Scripts\SelectableLevelManager.cs" />
      <Compile Include="Assets\Scripts\SlideManager.cs" />
+     <Compile Include="Assets\Scripts\Sound.cs" />
      <Compile Include="Assets\Scripts\SwitchToScene.cs" />
      <None Include="Assets\2d-extras-2018.2\Assets\Tilemap\Tiles\Rule Tile\ScriptTemplates\NewCustomRuleTile.cs.txt" />
      <None Include="Assets\2d-extras-2018.2\Assets\Tilemap\Brushes\Tint Brush Smooth\Shaders\TintedTilemap.shader" />

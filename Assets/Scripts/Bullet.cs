@@ -9,8 +9,8 @@ public class Bullet : MonoBehaviour {
 	public LayerMask alsoDestroyAt;
 
 	void Start () {
-		if (speed > 10000) {
-			speed = 10000;
+		if (speed > 100) {
+			speed = 100;
 		}
 	}
 	

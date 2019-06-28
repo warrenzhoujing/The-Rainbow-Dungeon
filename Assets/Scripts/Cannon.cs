@@ -21,7 +21,7 @@ public class Cannon : MonoBehaviour {
 
 	void Update () {
 		// start delay
-		if (startDelayCount < 0) {
+		if (startDelayCount <= 0) {
 			if (!started) {
 				Shoot();
 				started = true;
@@ -31,7 +31,7 @@ public class Cannon : MonoBehaviour {
 			startDelayCount -= 0.1f;
 		}
 		
-		if (delayCount < 0) {
+		if (delayCount <= 0) {
 			Shoot();
 		} 
 

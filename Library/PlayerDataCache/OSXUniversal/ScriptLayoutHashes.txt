@@ -5,8 +5,10 @@ SceneListBegin?
 Assets/Scenes/Main Menu.unity
 Assets/Scenes/Main Levels.unity
 Assets/Scenes/Challenges.unity
-Assets/Scenes/Normal Level.unity
 Assets/Scenes/The End.unity
+Assets/Scenes/Easy Level.unity
+Assets/Scenes/Normal Level.unity
+Assets/Scenes/Hard Level.unity
 SceneListEnd?
 c422dd62785a6d0afa870fbd111886ce Unity.TextMeshPro.dll:TMPro.TMP_SelectionCaret
 f1d07c725d89d9ff2105640255dfedbb Assembly-CSharp.dll:.ChangeTextColor
@@ -23,6 +25,7 @@ c7dd12c15208b0447e101f80038706df UnityEngine.Timeline.dll:UnityEngine.Timeline.A
 0ddb2c46096a1e59e0dce07886ce4769 UnityEngine.Timeline.dll:UnityEngine.Timeline.GroupTrack
 0ddb2c46096a1e59e0dce07886ce4769 UnityEngine.Timeline.dll:UnityEngine.Timeline.PlayableTrack
 64f3a13c1277a7f1324321d93d0ec13b UnityEngine.Timeline.dll:UnityEngine.Timeline.TimelineAsset
+486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:.CoinInfo
 f6637497451c9a030c421de4a1ad5cdb Unity.TextMeshPro.dll:TMPro.TMP_ScrollbarEventHandler
 8d1f3fbbee9d7bbb6811567fdff54dc3 Assembly-CSharp.dll:UnityEngine.IsometricRuleTile
 b14b4630cc47b6e9ea8a644551a6a8cc Unity.TextMeshPro.dll:TMPro.TMP_Text
@@ -94,6 +97,7 @@ e90403eeda069970e0b9de1533de13a6 UnityEngine.UI.dll:UnityEngine.UI.ToggleGroup
 16da51d1b62ef6d4ee1849350434023b UnityEngine.UI.dll:UnityEngine.UI.VerticalLayoutGroup
 65b1140c054f68c1d131ba694a36dc23 Assembly-CSharp.dll:UnityEngine.Tilemaps.RandomTile
 0db0b0b1f4b4159a0250910ffc5ba457 Assembly-CSharp.dll:.Player
+f2732ac7692f9d1845ff02e8fd78a0fa Assembly-CSharp.dll:.ResetPlayerPrefs
 8d1f3fbbee9d7bbb6811567fdff54dc3 Assembly-CSharp.dll:UnityEngine.RuleTile
 486cd95c82d8305219c352c06b776e1f UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationPlayableAsset
 9e61f3535f3c55760a1cedfbd114f4af UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationTrack
@@ -142,6 +146,7 @@ be506d0a490dbdafba058624628b88ed Assembly-CSharp.dll:.Coin
 307b4ebe11d56f236a9bfdc163ee4137 Assembly-CSharp.dll:.Controller2D
 f5ece19966a893bd3def5b7aaf85514d Assembly-CSharp.dll:UnityEngine.Tilemaps.PipelineTile
 80bb3ef0f22e02dafa48ef81b2fbf422 Assembly-CSharp.dll:UnityEngine.RuleOverrideTile
+ef9f30e0ec951ebf8a7a97f1f3204d75 Assembly-CSharp.dll:.CoinInfoSet
 eaf0bcdb10d442a4029d615f41d09957 Unity.TextMeshPro.dll:TMPro.TextContainer
 b22433bab605c8eae861caa427a0c9c5 Assembly-CSharp.dll:UnityEngine.HexagonalRuleTile
 ab4e018948c371fe69de81117aaa3dfd Assembly-CSharp.dll:.MetroidvaniaCamera
@@ -166,6 +171,7 @@ e53cc67d84060d628c7f03fc725766d8 Unity.TextMeshPro.dll:TMPro.TMP_FontAsset
 486cd95c82d8305219c352c06b776e1f UnityEngine.TestRunner.dll:UnityEngine.TestTools.TestRunner.Callbacks.PlayModeRunnerCallback
 e033f131358cea5a0eabf9561e781deb UnityEngine.TestRunner.dll:UnityEngine.TestTools.TestRunner.PlaymodeTestsController
 9d863b523b577f5c3d915351a74cd338 UnityEngine.TestRunner.dll:UnityEngine.TestTools.TestRunner.Callbacks.RemoteTestResultSender
+c641b523f27363b66cf2df0fb8fdba17 Assembly-CSharp.dll:.SelectableLevel
 01e72d6e0fdb43ea21a1cd0badb7ce75 Assembly-CSharp.dll:UnityEngine.Tilemaps.WeightedRandomTile
 1a90b221dc803408fbafa883c12bcab4 UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioListenerExtension
 70f7dc248db3379548a88e8d4fa049f8 UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioRoom
@@ -194,3 +200,4 @@ e04611b8715e6833d2bd7010fc6be10b Unity.TextMeshPro.dll:TMPro.TMP_StyleSheet
 93307bd34e39d73fd24e00ec39c25a91 Unity.TextMeshPro.dll:TMPro.TMP_SubMesh
 307b4ebe11d56f236a9bfdc163ee4137 Assembly-CSharp.dll:.RaycastController
 486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:.SwitchToScene
+a21a0bf898d1dbfae193e731ccf7992d Assembly-CSharp.dll:.AudioManager
