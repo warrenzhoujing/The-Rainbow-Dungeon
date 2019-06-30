@@ -18,6 +18,7 @@ public class SelectableLevel : MonoBehaviour {
 		CoinText.text = "Coins: " + accquiredCoinsForLevel[gameObject.name].ToString() + "/" + totalCoinsForLevel[gameObject.name].ToString();
 		
 	}
+	
 	Dictionary<string, int> StringToDict (string str) {
 		Dictionary<string, int> d = new Dictionary<string, int>(){};
 

@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/Hard Level.unity
+- path: Assets/Scenes/Challenges.unity
   isLoaded: 1
   isActive: 1

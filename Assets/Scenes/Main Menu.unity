@@ -157,7 +157,7 @@ MonoBehaviour:
   - Normal Level
   - Easy Level
   - Hard Level
-  numberOfCoinsInLevel: 230000000a00000023000000
+  numberOfCoinsInLevel: 230000000c00000023000000
   resetCoinInfo: 1
 --- !u!1 &31029093
 GameObject:

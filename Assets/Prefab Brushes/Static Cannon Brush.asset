@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Name: Static Cannon Brush
   m_EditorClassIdentifier: 
   m_Prefabs:
-  - {fileID: 1476998141776754, guid: 61c14d575b23f4d6db41f906ff6f80ec, type: 2}
+  - {fileID: 1476998141776754, guid: b29e90056352a4b27b4e64bc2ee69d65, type: 2}
   m_PerlinScale: 0.5
   m_Z: 0

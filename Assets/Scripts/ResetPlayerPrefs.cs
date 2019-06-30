@@ -9,6 +9,7 @@ public class ResetPlayerPrefs : MonoBehaviour{
 	public void ResetAll () {
 		PlayerPrefs.DeleteAll();
 		coinInfoSet.resetAllCoins();
+		PlayerPrefs.SetInt("resetCoinInfoAlready", 1);
 	}
 
 

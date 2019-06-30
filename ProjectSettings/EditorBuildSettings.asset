@@ -26,4 +26,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Hard Level.unity
     guid: 64b7db20e98b54802bd3adc36c4e4817
+  - enabled: 1
+    path: Assets/Scenes/The Orange Chamber.unity
+    guid: 2c31976eb78184a139f6e2d110de6f95
+  - enabled: 1
+    path: Assets/Scenes/The Red Tomb.unity
+    guid: 05055fb016c504597be51490b02fc525
   m_configObjects: {}
